@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    tools:context="branislav.gamf.chatapplication.MessageActivity"
+    >
+
+    <Button
+        android:id="@+id/logoutButton2"
+        android:text="@string/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <Button
+        android:id="@+id/refreshButton1"
+        android:text="@string/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/logoutButton2"
+
+        />
+
+    <TextView
+        android:id="@+id/friendFullName"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/logoutButton2"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:text="@string/send"
+        android:enabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+    <EditText
+        android:id="@+id/messsage"
+        android:hint="@string/messageString"
+        android:singleLine="true"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <ListView
+        android:id="@+id/customListMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sendButton"
+        android:layout_below="@+id/logoutButton2"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        ></ListView>
+
+
+</RelativeLayout>

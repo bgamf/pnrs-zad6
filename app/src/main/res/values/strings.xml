@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Chat Application</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="logout">LOG OUT</string>
+    <string name="refresh">REFRESH</string>
+    <string name="contact">my friend</string>
+    <string name="send">SEND</string>
+    <string name="messageString">message text</string>
+    <string name="gender">gender:</string>
+    <string name="date">Birth date:</string>
+    <string name="myChatList">My chat list:</string>
+    <string-array name="gender">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+
+    <string name="valid_registration">Successful registration!</string>
+    <string name="valid_login">Welcome!</string>
+    <string name="valid_logout">Goodbye!</string>
+    <string name="message_sent">Message sent!</string>
+    <string name="contact1">Erika Leonard</string>
+    <string name="contact2">Rex Ball</string>
+    <string name="contact3">Felicia Warner</string>
+    <string name="contact4">Chad Fuller</string>
+    <string name="contact5">Nettie Armstrong</string>
+    <string name="contact6">Tanya Foster</string>
+
+    <string name="message1">Hey!!!</string>
+    <string name="message2">Hello how are you? ^_^</string>
+    <string name="message3">I`m fine thanks.What`s up? :D</string>
+    <string name="message4">Long time no see...</string>
+    <string name="message5">Nothing special,will I see you tonight?</string>
+    <string name="message6">Sure,meet me at 8? ;)</string>
+    <string name="message7">Fine,see you! :*</string>
+
+</resources>

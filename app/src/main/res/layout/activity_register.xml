@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="branislav.gamf.chatapplication.RegisterActivity"
+    >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+        <EditText
+            android:id="@+id/regUsername"
+            android:hint="Username*"
+            android:singleLine="true"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <EditText
+            android:id="@+id/regFirstName"
+            android:hint="First Name"
+            android:singleLine="true"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <EditText
+            android:id="@+id/regPassword"
+            android:hint="Password*"
+            android:password="true"
+            android:singleLine="true"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/regUsername"
+            />
+
+        <EditText
+            android:id="@+id/regLastName"
+            android:hint="Last Name"
+            android:singleLine="true"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/regFirstName"
+             />
+
+        <EditText
+            android:id="@+id/regEmail"
+            android:hint="Email*"
+            android:singleLine="true"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/regPassword"
+            />
+
+        <TextView
+            android:id="@+id/gender"
+            android:text="@string/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/regEmail"
+            android:layout_toLeftOf="@+id/regGender"
+            />
+
+        <Spinner
+            android:id="@+id/regGender"
+            android:entries="@array/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/gender"
+            android:layout_alignParentRight="true" />
+
+        <CheckBox
+            android:id="@+id/regCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/regEmail"
+            />
+
+        <TextView
+            android:id="@+id/regNotifications"
+            android:text="Accept Notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/regCheckBox"
+            android:layout_alignBaseline="@+id/regCheckBox"
+            />
+        <TextView
+            android:id="@+id/birthDate"
+            android:text="@string/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/regCheckBox"
+            />
+
+
+        <DatePicker
+            android:id="@+id/regCalendar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/birthDate"
+            ></DatePicker>
+
+        <Button
+            android:id="@+id/regButton"
+            android:text="@string/register"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/regCalendar"
+            android:layout_centerHorizontal="true"
+
+            />
+    </RelativeLayout>
+</ScrollView>
