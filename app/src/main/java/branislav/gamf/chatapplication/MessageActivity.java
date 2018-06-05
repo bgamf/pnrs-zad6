@@ -25,6 +25,7 @@ import java.util.ArrayList;
 
 public class MessageActivity extends AppCompatActivity {
 
+    private Crypto myCrypto = new Crypto();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,9 +110,10 @@ public class MessageActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         try{
+                            String crypMsg = myCrypto.crypt(message);
                             JSONObject object = new JSONObject();
                             object.put("receiver",receiverUsername);
-                            object.put("data",message);
+                            object.put("data",crypMsg);
 
                             final boolean response = httphelper.sendMessageToServer(MessageActivity.this,httphelper.URL_MESSAGE_SEND,object);
 
@@ -200,7 +202,7 @@ public class MessageActivity extends AppCompatActivity {
                                 for(int i = 0;i < array.length();i++){
                                     try{
                                         temp = array.getJSONObject(i);
-                                        Message m=new Message(null,temp.getString("sender"),null,temp.getString("data"));
+                                        Message m=new Message(null,temp.getString("sender"),null,myCrypto.crypt(temp.getString("data")));
                                         messages.add(m);
                                         }catch(JSONException e){
                                             e.printStackTrace();
